@@ -13,9 +13,9 @@ const prompt = require('prompt-sync')();
         x3 = -(b) / (2 * a);
 */
 
-let a = prompt("Qual o valor do a?: ");
-let b = prompt("Qual o valor do b?: ");
-let c = prompt("Qual o valor do c?: ");
+let a = parseFloat(prompt("Qual o valor do a?: "));
+let b = parseFloat(prompt("Qual o valor do b?: "));
+let c = parseFloat(prompt("Qual o valor do c?: "));
 
 if (a != 0) {
     console.log("\nVerificando qual o valor do Delta (Δ):");
@@ -38,3 +38,14 @@ if (a != 0) {
 } else {
 	console.log("\nO valor de A não pode ser 0.");
 }
+
+
+
+
+
+
+
+
+
+
+
