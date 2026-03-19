@@ -1,4 +1,4 @@
-const prompt = require(`prompt-sync`)();
+const prompt = require('prompt-sync')();
 
 const mercado = [];
 const ferramentas = [];
@@ -25,11 +25,11 @@ while (true) {
 
 			if (index == -1) {
 				mercado.push(element);
-				console.log('Produto', element, 'colocado no Estoque. Estoque atualizado.');
+				console.log('Produto "' + element + '" colocado no Estoque. Estoque atualizado.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			} else {
-				console.log('Produto', element, 'já está no Estoque.');
+				console.log('Produto' + element + 'já está no Estoque.');
 				prompt("Pressione Enter para continuar: ");
 			}
 		}
@@ -40,11 +40,11 @@ while (true) {
 
 			if (index == -1) {
 				ferramentas.push(element);
-				console.log('Produto', element, 'colocado no Estoque. Estoque atualizado.');
+				console.log('Produto "' + element + '" colocado no Estoque. Estoque atualizado.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			} else {
-				console.log('Produto', element, 'já está no Estoque.');
+				console.log('Produto "' + element + '" já está no Estoque.');
 				prompt("Pressione Enter para continuar: ");
 			}
 		}
@@ -55,11 +55,11 @@ while (true) {
 
 			if (index == -1) {
 				carros.push(element);
-				console.log('Produto', element, 'colocado no Estoque. Estoque atualizado.');
+				console.log('Produto "' + element + '" colocado no Estoque. Estoque atualizado.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			} else {
-				console.log('Produto', element, 'já está no Estoque.');
+				console.log('Produto "' + element + '" já está no Estoque.');
 				prompt("Pressione Enter para continuar: ");
 			}
 		}
@@ -72,46 +72,46 @@ while (true) {
 		console.log("Alternativas: [ 1 || mercado ] ou [ 2 || ferramenta ] ou [ 3 || carro ]\n");
 		let choose = prompt();
 		if (choose == 1 || choose == "mercado") {
-			console.log("\nO que queira adicionar no Estoque [ " + mercado + " ] ?");
+			console.log("\nO que queira remover no Estoque [ " + mercado + " ] ?");
 			let element = prompt();
 			let index = mercado.indexOf(element);
 			if (index !== -1) {
 				mercado.splice(index, 1);
-				console.log('Produto', element, 'foi removido da Estoque.');
+				console.log('Produto "' + element + '" foi removido da Estoque.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			} else {
-				console.log('Não existe', element, 'na Estoque.');
+				console.log('Não existe "' + element + '" na Estoque.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			}
 		}
 		if (choose == 2 || choose == "ferramenta") {
-			console.log("\nO que queira adicionar no Estoque [ " + ferramentas + " ] ?");
+			console.log("\nO que queira remover no Estoque [ " + ferramentas + " ] ?");
 			let element = prompt();
 			let index = ferramentas.indexOf(element);
 			if (index !== -1) {
 				ferramentas.splice(index, 1);
-				console.log('Produto', element, 'foi removido da Estoque.');
+				console.log('Produto "' + element + '" foi removido da Estoque.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			} else {
-				console.log('Não existe', element, 'na Estoque.');
+				console.log('Não existe "' + element + '" na Estoque.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			}
 		}
 		if (choose == 3 || choose == "carro") {
-			console.log("\nO que queira adicionar no Estoque [ " + carros + " ] ?");
+			console.log("\nO que queira remover no Estoque [ " + carros + " ] ?");
 			let element = prompt();
-			let index = ferramentas.indexOf(element);
+			let index = carros.indexOf(element);
 			if (index !== -1) {
 				carros.splice(index, 1);
-				console.log('Produto', element, 'foi removido da Estoque.');
+				console.log('Produto "' + element + '" foi removido da Estoque.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			} else {
-				console.log('Não existe', element, 'na Estoque.');
+				console.log('Não existe "' + element + '" na Estoque.');
 				prompt("Pressione Enter para continuar: ");
 				continue;
 			}
@@ -159,13 +159,13 @@ while (true) {
     	let element = prompt();
 
     	if (mercado.indexOf(element) !== -1) {
-        	console.log('Produto', element, 'encontrado na lista [ mercado ].');
+        	console.log('Produto "' + element + '" encontrado na lista [ mercado ].');
     	} else if (ferramentas.indexOf(element) !== -1) {
-        	console.log('Produto', element, 'encontrado na lista [ ferramentas ].');
+        	console.log('Produto "' + element + '" encontrado na lista [ ferramentas ].');
     	} else if (carros.indexOf(element) !== -1) {
-        	console.log('Produto', element, 'encontrado na lista [ carros ].');
+        	console.log('Produto "' + element + '" encontrado na lista [ carros ].');
     	} else {
-        	console.log('Produto', element, 'não encontrado em nenhuma lista.');
+        	console.log('Produto "' + element + '" não encontrado em nenhuma lista.');
     	}
 
     	prompt("\nPressione Enter para continuar: ");
