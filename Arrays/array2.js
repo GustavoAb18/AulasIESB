@@ -176,24 +176,24 @@ while (true) {
 		let choose = prompt();
 		
 		if (choose == 1 || choose == "orderup") {
-			console.log("Qua lista você deseja fazer em ordem crescente?");
+			console.log("Qual lista você deseja fazer em ordem crescente?");
 			console.log("A do [mercado]: " + mercado);
 			console.log("A de [ferramenta]: " + ferramentas);
 			console.log("A do [carro]: " + carros);
 			
 			let inc = prompt();
-			if (inc == mercado) {
-				mercado.sort((a, b) => a - b);
+			if (inc == "mercado") {
+				mercado.sort((a, b) => a.localeCompare(b));
 				console.log(mercado);
 				prompt("Digite [ENTER] para voltar o programa.. ");
 				continue;
-			} else if (inc == ferramenta) {
-				ferramentas.sort((a, b) => a - b);
+			} else if (inc == "ferramenta") {
+				ferramentas.sort((a, b) => a.localeCompare(b));
 				console.log(ferramentas);
 				prompt("Digite [ENTER] para voltar o programa.. ");
 				continue;
-			} else if (inc == carro) {
-				carros.sort((a, b) => a - b);
+			} else if (inc == "carro") {
+				carros.sort((a, b) => a.localeCompare(b));
 				console.log(carros);
 				prompt("Digite [ENTER] para voltar o programa.. ");
 				continue;
@@ -203,24 +203,24 @@ while (true) {
 			}
 			
 		} else if (choose == 2 || choose == "orderdown") {
-			console.log("Qua lista você deseja fazer em ordem decrescente?");
+			console.log("Qual lista você deseja fazer em ordem decrescente?");
 			console.log(mercado);
 			console.log(ferramentas);
 			console.log(carros);
 			
 			let dec = prompt();
-			if (dec == mercado) {
-				mercado.sort((a, b) => b - a);
+			if (dec == "mercado") {
+				mercado.sort((a, b) => b.localeCompare(a));
 				console.log(mercado);
 				prompt("Digite [ENTER] para voltar o programa.. ");
 				continue;
-			} else if (dec == ferramenta) {
-				ferramentas.sort((a, b) => b - a);
+			} else if (dec == "ferramenta") {
+				ferramentas.sort((a, b) => b.localeCompare(a));
 				console.log(ferramentas);
 				prompt("Digite [ENTER] para voltar o programa.. ");
 				continue;
-			} else if (dec == carro) {
-				carros.sort((a, b) => b - a);
+			} else if (dec == "carro") {
+				carros.sort((a, b) => b.localeCompare(a));
 				console.log(carros);
 				prompt("Digite [ENTER] para voltar o programa.. ");
 				continue;
@@ -265,7 +265,7 @@ while (true) {
 							if (index == -1) {
 								mercado.push(ob5);
 								console.log('Produto "' + ob5 + '" foi colocado na Estoque. Ordenando.."');
-								mercado.sort((a, b) => b - a);
+								mercado.sort((a, b) => a.localeCompare(b));
 								console.log(mercado);
 								prompt("Tecle [ENTER] para voltar o programa..");
 								continue;
@@ -321,7 +321,7 @@ while (true) {
 							if (index == -1) {
 								ferramentas.push(ob5);
 								console.log('Produto "' + ob5 + '" foi colocado na Estoque. Ordenando.."');
-								ferramentas.sort((a, b) => b - a);
+								ferramentas.sort((a, b) => a.localeCompare(b));
 								console.log(ferramentas);
 								prompt("Tecle [ENTER] para voltar o programa..");
 								continue;
@@ -377,7 +377,7 @@ while (true) {
 							if (index == -1) {
 								carros.push(ob5);
 								console.log('Produto "' + ob5 + '" foi colocado na Estoque. Ordenando.."');
-								carros.sort((a, b) => b - a);
+								carros.sort((a, b) => a.localeCompare(b));
 								console.log(carros);
 								prompt("Tecle [ENTER] para voltar o programa..");
 								continue;
