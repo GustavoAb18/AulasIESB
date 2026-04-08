@@ -417,4 +417,8 @@ while (true) {
 		prompt("\nEssa não é uma opção válida. Pressione [ENTER] e selecione as opções novamente..");
 		continue;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 022bf3173a3575a09e33ac2bab829aaba313ea13
